@@ -5,7 +5,7 @@ export default function Home() {
       <h1 className="text-5xl font-bold text-blue-500">
         TNT 스택 + Tailwind v3
       </h1>
-      <p className="mt-4 text-xl text-gray-300">이제 자동완성이 잘 되나요?</p>
+      <p className="mt-4 text-xl text-gray-300">SJ DEV log 블로그 많관부</p>
       {/* 테스트용: 아래 빈 따옴표 안에 커서를 두고 Ctrl + Space를 눌러보세요 */}
       <div className="text-red-300">test</div>
     </main>
