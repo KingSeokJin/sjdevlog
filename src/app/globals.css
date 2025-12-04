@@ -3,55 +3,66 @@
 @tailwind utilities;
 
 @layer base {
+  /* 🔹 공통 폰트 적용 */
   * {
     font-family: 'Pretendard Variable', Pretendard, sans-serif;
   }
-  html {
-    max-width: 480px;
-    margin: 0 auto;
-    min-height: 100vh;
+
+  /* 🔹 Reset */
+  html,
+  body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
     background-color: #f8f8f8;
   }
+
+  /* 🔹 Next.js – 기본 구조 */
   body {
-    overflow-x: hidden;
+    overflow-x: hidden; /* 수평 스크롤 방지 */
   }
-  body {
-    -ms-overflow-style: none;
-  }
-  html,
-  body,
-  #root {
-    height: 100%;
-  }
-  ::-webkit-scrollbar {
-    display: none;
-  }
+
+  /* 🔹 버튼 기본 스타일 최소화(필수 요소만) */
   button {
     margin: 0;
     padding: 0;
     border: none;
-    background-color: transparent;
+    background: none; /* 완전 투명으로 고정, 필요하면 Tailwind로 override 가능 */
     cursor: pointer;
-    &:disabled {
-      cursor: not-allowed;
-    }
   }
-  input {
+
+  button:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+
+  /* 🔹 input 기본 리셋 */
+  input,
+  textarea {
     border: none;
-    :focus {
-      outline: none;
-    }
-  }
-  a {
-    color: #fff;
-    text-decoration: none;
     outline: none;
   }
-  a:hover,
-  a:active {
+
+  /* 🔹 링크 색상 강제 */
+  /* 브라우저 기본 색상 유지 → Tailwind로 스타일링하는게 더 안정적 */
+  a {
     text-decoration: none;
   }
+
+  /* 🔹 이미지 반응형 기본 유지 
+     (Tailwind 기본값과 충돌 없도록 max-width 제거) */
   img {
-    max-width: none;
+    display: block;
+    height: auto;
+    max-width: 100%;
+  }
+
+  /* 🔹 스크롤바 제거는 UX 손상 위험 → 선택 적용으로 변경 */
+  /* 필요 시 이 클래스를 특정 컴포넌트 드롭다운 등에만 적용 */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    scrollbar-width: none;
   }
 }
