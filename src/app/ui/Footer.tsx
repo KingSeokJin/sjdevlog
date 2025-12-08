@@ -46,7 +46,7 @@ const Footer = () => {
               sjdevlog
             </span>
           </Link>
-          <p className="font-arimo text-center text-[14px] font-normal text-[#737373] md:text-left">
+          <p className="text-center font-arimo text-[14px] font-normal text-[#737373] md:text-left">
             © 2025 sjdevlog. All rights reserved.
           </p>
         </div>

@@ -22,7 +22,7 @@ const Navigation = () => {
             key={category}
             onClick={() => setActiveCategory(category)}
             // whitespace-nowrap: 글자가 줄바꿈되지 않게 방지
-            className={`font-arimo flex shrink-0 items-center justify-center whitespace-nowrap rounded-[10px] text-[16px] leading-[24px] transition-colors ${
+            className={`flex shrink-0 items-center justify-center whitespace-nowrap rounded-[10px] font-arimo text-[16px] leading-[24px] transition-colors ${
               activeCategory === category
                 ? 'bg-[#171717] px-[16px] py-[6px] text-white'
                 : 'px-[16px] py-[6px] text-[#171717] hover:bg-gray-100'

@@ -51,7 +51,7 @@ const Profile = () => {
               안녕하세요, 개발자 SJ입니다
             </h1>
 
-            <p className="font-arimo max-w-[480px] text-[16px] font-normal leading-[24px] text-[#525252]">
+            <p className="max-w-[480px] font-arimo text-[16px] font-normal leading-[24px] text-[#525252]">
               기술적 성장을 기록하고 공유하는 공간입니다. 알고리즘, 프로젝트
               경험, 새로운 기술 학습 과정을 카테고리별로 정리하여 개발자로서의
               여정을 문서화합니다.
@@ -113,7 +113,7 @@ const Profile = () => {
                 <span className="font-arimo text-[16px] font-normal text-[#171717]">
                   {stat.value}
                 </span>
-                <span className="font-arimo text-right text-[16px] font-normal text-[#737373]">
+                <span className="text-right font-arimo text-[16px] font-normal text-[#737373]">
                   {stat.label}
                 </span>
               </div>
