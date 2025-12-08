@@ -1,5 +1,4 @@
 'use client';
-
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -22,15 +21,21 @@ const Footer = () => {
     },
   ];
 
+  // (socialLinks 데이터 선언 부분은 기존과 동일하므로 생략하거나 그대로 두세요)
+  // ...
+
   return (
-    <footer className="h-[160px] w-full border-t border-[#E5E5E5] bg-white">
-      {/* h-full을 줘서 160px 높이 안에서 내용물이 수직 중앙 정렬(items-center)되도록 함 
-         Header, Grid와 동일한 가로폭(max-w-[1430px]) 및 패딩(px-[139px]) 적용
+    <footer className="w-full border-t border-[#E5E5E5] bg-white">
+      {/* [반응형 수정]
+          1. h-auto md:h-[160px] : 모바일 높이 자동
+          2. px-4 md:px-[139px]
+          3. flex-col md:flex-row : 모바일 세로, PC 가로
+          4. py-8 md:py-0 : 모바일 위아래 여백
+          5. gap-6 md:gap-0 : 모바일 요소 간격
       */}
-      <div className="mx-auto flex h-full w-full max-w-[1430px] items-center justify-between px-[139px]">
-        {/* === 왼쪽: 로고 & 저작권 문구 === */}
-        <div className="flex flex-col gap-3">
-          {/* 로고 (Header와 동일한 스타일) */}
+      <div className="mx-auto flex h-auto w-full max-w-[1430px] flex-col items-center justify-between gap-6 px-4 py-8 md:h-full md:flex-row md:gap-0 md:px-[139px] md:py-0">
+        {/* 왼쪽: 로고 & 저작권 */}
+        <div className="flex flex-col items-center gap-3 md:items-start">
           <Link href="/" className="flex items-center gap-2">
             <div className="flex h-[32px] w-[32px] items-center justify-center rounded-[10px] bg-[#171717]">
               <span className="font-arimo text-[16px] font-normal leading-[24px] text-white">
@@ -41,15 +46,14 @@ const Footer = () => {
               sjdevlog
             </span>
           </Link>
-
-          {/* 저작권 문구 */}
-          <p className="font-arimo text-[14px] font-normal text-[#737373]">
+          <p className="font-arimo text-center text-[14px] font-normal text-[#737373] md:text-left">
             © 2025 sjdevlog. All rights reserved.
           </p>
         </div>
 
-        {/* === 오른쪽: 소셜 아이콘 === */}
+        {/* 오른쪽: 소셜 아이콘 */}
         <div className="flex gap-4">
+          {/* ... 기존 map 코드 동일 ... */}
           {socialLinks.map((social) => (
             <Link
               key={social.name}
@@ -71,5 +75,5 @@ const Footer = () => {
     </footer>
   );
 };
-
+// (socialLinks 데이터가 누락되었다면 기존 코드에서 복사해서 넣으세요)
 export default Footer;
