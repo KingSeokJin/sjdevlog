@@ -38,7 +38,7 @@ const Profile = () => {
           {/* 상단 텍스트 그룹 */}
           <div className="flex flex-col items-start gap-4">
             {/* 뱃지 */}
-            <span className="inline-flex items-center justify-center rounded-full bg-[#F5F5F5] pb-[5.73px] pl-[11.99px] pr-[14.33px] pt-[2.24px]">
+            <span className="inline-flex items-center justify-center rounded-full bg-[#F5F5F5] py-[5px] pl-[11.99px] pr-[14.33px]">
               <span className="font-arimo text-[14px] font-bold text-[#171717]">
                 {' '}
                 {/* 폰트 사이즈 임의 지정 (보통 12~14px) */}
