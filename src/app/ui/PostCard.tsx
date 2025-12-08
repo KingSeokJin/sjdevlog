@@ -38,17 +38,17 @@ const PostCard = ({ post }: { post: PostProps }) => {
         >
           <div className="space-y-3">
             {/* 카테고리 뱃지 (Tech 스타일 적용) */}
-            <span className="font-arimo inline-block rounded-[4px] bg-[#F3E8FF] px-2 py-1 text-[14px] font-normal text-[#59168B]">
+            <span className="inline-block rounded-[4px] bg-[#F3E8FF] px-2 py-1 font-arimo text-[14px] font-normal text-[#59168B]">
               {post.category}
             </span>
 
             {/* 제목 */}
-            <h3 className="font-arimo line-clamp-2 text-[16px] font-normal text-[#171717]">
+            <h3 className="line-clamp-2 font-arimo text-[16px] font-normal text-[#171717]">
               {post.title}
             </h3>
 
             {/* 설명 (Description) */}
-            <p className="font-arimo line-clamp-3 text-[16px] font-normal text-[#525252]">
+            <p className="line-clamp-3 font-arimo text-[16px] font-normal text-[#525252]">
               {post.desc}
             </p>
           </div>
@@ -59,7 +59,7 @@ const PostCard = ({ post }: { post: PostProps }) => {
               {post.tags.map((tag) => (
                 <span
                   key={tag}
-                  className="font-arimo flex h-[21.23px] items-center justify-center rounded-[8px] border-[0.625px] border-solid border-gray-200 bg-[#F5F5F5] px-[8px] text-[12px] font-normal text-[#525252]"
+                  className="flex h-[21.23px] items-center justify-center rounded-[8px] border-[0.625px] border-solid border-gray-200 bg-[#F5F5F5] px-[8px] font-arimo text-[12px] font-normal text-[#525252]"
                 >
                   {tag}
                 </span>

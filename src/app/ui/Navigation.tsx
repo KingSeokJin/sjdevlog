@@ -11,7 +11,7 @@ const Navigation = () => {
           <button
             key={category}
             onClick={() => setActiveCategory(category)}
-            className={`font-arimo flex items-center justify-center rounded-[10px] text-[16px] leading-[24px] transition-colors ${
+            className={`flex items-center justify-center rounded-[10px] font-arimo text-[16px] leading-[24px] transition-colors ${
               activeCategory === category
                 ? 'bg-[#171717] px-[16px] py-[6px] text-white' // 선택된 상태 스타일
                 : 'px-[16px] py-[6px] text-[#171717] hover:bg-gray-100' // 기본 상태 스타일
