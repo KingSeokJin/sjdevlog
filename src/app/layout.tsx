@@ -1,6 +1,12 @@
 import type { Metadata } from 'next';
-import { Geist, Geist_Mono } from 'next/font/google';
+import { Geist, Geist_Mono, Arimo } from 'next/font/google';
 import './globals.css';
+
+const arimo = Arimo({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'], // 필요한 굵기 선택
+  variable: '--font-arimo', // CSS 변수 이름 설정
+});
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -24,7 +30,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} ${arimo.variable}`}
+      >
         {children}
       </body>
     </html>
